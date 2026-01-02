@@ -11,7 +11,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     
-    <style>
+        <style>
         :root {
             --primary-text: #000000;
             --secondary-text: #4B5563;
@@ -51,18 +51,33 @@
             margin-left: 1.5rem;
         }
 
-        /* Formal Header - No Image */
+        /* Formal Header with Profile Image */
         .header-section {
-            padding: 100px 0 60px;
-            text-align: center;
+            padding: 80px 0 60px;
             border-bottom: 1px solid var(--border-color);
         }
 
+        .profile-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 8px; /* Slightly rounded for formal look */
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%); /* Keep it subtle but clean */
+        }
+
         .hero-name {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 800;
             letter-spacing: -0.04em;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
             text-transform: uppercase;
         }
 
@@ -70,17 +85,16 @@
             font-size: 1.1rem;
             color: var(--secondary-text);
             font-weight: 500;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
         }
 
         .contact-info {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 1rem 2.5rem;
-            margin-bottom: 2.5rem;
+            gap: 1rem 2rem;
+            margin-bottom: 2rem;
         }
 
         .contact-item {
@@ -96,10 +110,10 @@
         .btn-download {
             background-color: var(--primary-text);
             color: #fff;
-            padding: 0.9rem 2.5rem;
+            padding: 0.75rem 2rem;
             border-radius: 2px;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -267,10 +281,12 @@
         }
 
         @media (max-width: 768px) {
-            .hero-name { font-size: 2.5rem; }
+            .hero-name { font-size: 2.2rem; }
             .exp-meta { flex-direction: column; }
             .exp-date { margin-bottom: 0.5rem; }
-            .header-section { padding: 80px 0 40px; }
+            .header-section { padding: 60px 0 40px; text-align: center; }
+            .contact-info { justify-content: center; }
+            .profile-container { margin-left: auto; margin-right: auto; }
         }
 
         @media print {
@@ -300,27 +316,37 @@
     </nav>
 
     <!-- Formal Header Section -->
-    <header class="header-section">
+     <header class="header-section">
         <div class="container px-4">
-            <h1 class="hero-name">JARUWAN SOIYAM</h1>
-            <p class="hero-title">System Analyst / Business Analyst / ERP Developer / ERP Consultant</p>
-            
-            <div class="contact-info">
-                <a href="mailto:daojaruwans@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope-at"></i> daojaruwans@gmail.com
-                </a>
-                <span class="contact-item">
-                    <i class="bi bi-telephone"></i> 082-3466598
-                </span>
-                <span class="contact-item">
-                    <i class="bi bi-geo-alt"></i> Samutsakhon, Thailand
-                </span>
-            </div>
+            <div class="row align-items-center">
+                <div class="col-md-auto">
+                    <!-- Profile Image - Formal Size -->
+                    <div class="profile-container">
+                        <img src="https://i.ibb.co/217rrwH9/Profile-Dev-2.jpg" alt="Jaruwan Soiyam" class="profile-img">
+                    </div>
+                </div>
+                <div class="col-md">
+                    <h1 class="hero-name">JARUWAN SOIYAM</h1>
+                    <p class="hero-title">System Analyst / Business Analyst / ERP Developer / ERP Consultant</p>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:daojaruwans@gmail.com" class="contact-item">
+                            <i class="bi bi-envelope-at"></i> daojaruwans@gmail.com
+                        </a>
+                        <span class="contact-item">
+                            <i class="bi bi-telephone"></i> 082-3466598
+                        </span>
+                        <span class="contact-item">
+                            <i class="bi bi-geo-alt"></i> Samutsakhon, Thailand
+                        </span>
+                    </div>
 
-            <!-- Primary Download Button -->
-            <a href="https://drive.google.com/uc?export=download&id=1BOlK6hU_BK_XCr3Nhy6N2pXnvInN-e3R" class="btn-download">
-                <i class="bi bi-file-earmark-pdf"></i> Download PDF Resume
-            </a>
+                    <!-- Primary Download Button -->
+                    <a href="https://drive.google.com/uc?export=download&id=1BOlK6hU_BK_XCr3Nhy6N2pXnvInN-e3R" class="btn-download">
+                        <i class="bi bi-file-earmark-pdf"></i> Download PDF Resume
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
